@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "287b5d2724de247d70dbfe1b44c0f324",
+    "content-hash": "84abcc54fee0d7ea6654784ea84d3a32",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1331,6 +1331,162 @@
             ],
             "description": "Drupal Console Extend Plugin",
             "time": "2017-07-28T17:11:54+00:00"
+        },
+        {
+            "name": "drupal/devel",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/devel",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/devel-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "01f3349ef75f6e21fceef24be9d3d6506ca29647"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Pretty print complex values better with var-dumper available"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1507197844",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Moshe Weitzman",
+                    "homepage": "https://github.com/weitzman",
+                    "email": "weitzman@tejasa.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Hans Salvisberg",
+                    "homepage": "https://www.drupal.org/u/salvis",
+                    "email": "drupal@salvisberg.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Luca Lusso",
+                    "homepage": "https://www.drupal.org/u/lussoluca",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Marco (willzyx)",
+                    "homepage": "https://www.drupal.org/u/willzyx",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/3236/committers"
+                },
+                {
+                    "name": "salvis",
+                    "homepage": "https://www.drupal.org/user/82964"
+                },
+                {
+                    "name": "willzyx",
+                    "homepage": "https://www.drupal.org/user/1043862"
+                }
+            ],
+            "description": "Various blocks, pages, and functions for developers.",
+            "homepage": "http://drupal.org/project/devel",
+            "support": {
+                "source": "http://cgit.drupalcode.org/devel",
+                "issues": "http://drupal.org/project/devel",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/masquerade",
+            "version": "2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/masquerade",
+                "reference": "8.x-2.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/masquerade-8.x-2.0-beta2.zip",
+                "reference": "8.x-2.0-beta2",
+                "shasum": "a9fc1a54636f131d1e344113ce4c80a6c27bc8aa"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-beta2",
+                    "datestamp": "1521762446",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Postnikov (andypost)",
+                    "homepage": "https://www.drupal.org/u/andypost",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "David Norman (deekayen)",
+                    "homepage": "https://www.drupal.org/u/deekayen",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mark Shropshire (shrop)",
+                    "homepage": "https://www.drupal.org/u/shrop",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Daniel Kudwien (sun)",
+                    "homepage": "https://www.drupal.org/u/sun",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Andrew Berry (deviantintegral)",
+                    "homepage": "https://www.drupal.org/u/deviantintegral",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "sun",
+                    "homepage": "https://www.drupal.org/user/54136"
+                }
+            ],
+            "description": "Allows privileged users to masquerade as another user.",
+            "homepage": "https://www.drupal.org/project/masquerade",
+            "support": {
+                "source": "https://git.drupal.org/project/masquerade.git",
+                "issues": "https://www.drupal.org/project/issues/masquerade",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
         },
         {
             "name": "drush/drush",
@@ -6484,6 +6640,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/masquerade": 10,
         "behat/mink": 20,
         "behat/mink-selenium2-driver": 20
     },

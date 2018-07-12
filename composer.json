@@ -8,7 +8,9 @@
         "wikimedia/composer-merge-plugin": "^1.4",
         "drush/drush": "8.1.16",
         "drupal/business": "^1.7",
-        "drupal/console": "^1.8"
+        "drupal/console": "^1.8",
+        "drupal/devel": "^1.2",
+        "drupal/masquerade": "^2.0@beta"
     },
     "replace": {
         "drupal/core": "^8.5"
