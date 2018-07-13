@@ -1,0 +1,4 @@
+access calculator:
+  title: 'access calculator'
+  description: 'Access calculator custom wiki bits'
+  restrict access: true

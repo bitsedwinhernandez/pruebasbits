@@ -1,0 +1,128 @@
+<?php
+
+/**
+ * @file
+ * Contains bits_entities.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Entity\EntityInterface;
+use \Drupal\node\Entity\Node;
+use \Drupal\file\Entity\File;
+use \Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function bits_entities_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the bits_entities module.
+    case 'help.page.bits_entities':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Entidades de configuración') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for node entities.
+ *
+ * This tests saving a node on node insert.
+ *
+ * @see \Drupal\node\Tests\NodeSaveTest::testNodeSaveOnInsert()
+ */
+function bits_entities_node_insert(NodeInterface $node) {
+  // Set the node title to the node ID and save.
+  if ($node->getType() == 'article') {
+    $node->setTitle(t('Article : ') . $node->getTitle());
+    $node->setNewRevision(FALSE);
+    $node->save();
+  }
+}
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+/*function bits_entities_entity_type_alter(array &$entity_types) {
+  // We get all form modes, for all entities, and loop through them.
+  $form_modes = \Drupal::service('entity_display.repository')->getAllFormModes();
+  foreach ($form_modes as $entity_type => $display_modes) {
+    if ($entity_type !== 'user') {
+      // We are only interested in adding a handler to the Node entity.
+      continue;
+    }
+    $user_entity = $entity_types[$entity_type];
+    $node = Node::create([
+      'type'        => 'page',
+      'title'       => 'Presentación de Nombre:'
+    ]);
+    $node->save();
+  }
+}*/
+
+function bits_entities_entity_delete(EntityInterface $entity) {
+  var_dump($entity);
+  die();
+}
+
+
+function bits_entities_form_alter(&$form, FormStateInterface $form_state, $form_id){
+  switch ($form_id) {
+    case 'user_register_form':
+      $form['actions']['submit']['#submit'][] = '_bits_entities_form_submit';
+      var_dump($form['actions']['submit']['#submit']);
+      break;
+
+    default:
+      # code...
+      break;
+  }
+}
+
+
+function _bits_entities_form_submit(array $form, FormStateInterface $form_state){
+  $values = $form_state->getValues();
+  $node = Node::create([
+      'type'        => 'page',
+      'title'       => 'Presentación de Nombre:' . $values['name']
+    ]);
+  $node->save();
+}
+
+/**
+ * Implements hook_theme().
+ */
+function bits_entities_theme() {
+  $theme = [];
+  $theme['bits_entities_message'] = [
+    'render element' => 'elements',
+    'file' => 'bits_entities_message.page.inc',
+    'template' => 'bits_entities_message',
+  ];
+  $theme['bits_entities_message_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'bits_entities_message.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function bits_entities_theme_suggestions_bits_entities_message(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#bits_entities_message'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'bits_entities_message__' . $sanitized_view_mode;
+  $suggestions[] = 'bits_entities_message__' . $entity->bundle();
+  $suggestions[] = 'bits_entities_message__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'bits_entities_message__' . $entity->id();
+  $suggestions[] = 'bits_entities_message__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

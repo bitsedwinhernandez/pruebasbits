@@ -1,0 +1,39 @@
+<?php
+  function bits_forms_install(){
+    $schema['bits_forms_simple'] = array(
+      'fields'=>array(
+        'id'=>array(
+          'type'=>'serial',
+          'not null'=> true,
+        ),
+        'title'=>array(
+          'type'=> 'varchar',
+          'lenght'=>255,
+          'not null'=> TRUE,
+        ),
+        'uid'=> array(
+          'type'=> 'int',
+          'not null'=>true
+        ),
+        'username'=>array(
+          'type'=> 'varchar',
+          'lenght'=>255,
+        ),
+        'email'=>array(
+          'type'=> 'varchar',
+          'lenght'=>255,
+        ),
+        'ip'=>array(
+          'type'=> 'varchar',
+          'lenght'=>255,
+        ),
+        'timestamp'=>array(
+          'type'=> 'int',
+          'lenght'=>255,
+          'not null'=>true
+        ),
+      ),
+      'primary key' => array('id'),
+    );
+    return $schema;
+  }

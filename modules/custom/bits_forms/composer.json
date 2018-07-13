@@ -1,0 +1,14 @@
+{
+  "name": "drupal/bits_forms",
+  "type": "drupal-module",
+  "description": "Modulo custom de formularios Wiki Bits",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/bits_forms",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/bits_forms",
+    "source": "http://cgit.drupalcode.org/bits_forms"
+  },
+  "require": { }
+}

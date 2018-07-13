@@ -1,0 +1,14 @@
+{
+  "name": "drupal/bits_users",
+  "type": "drupal-module",
+  "description": "Usuarios Bits",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/bits_users",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/bits_users",
+    "source": "http://cgit.drupalcode.org/bits_users"
+  },
+  "require": { }
+}

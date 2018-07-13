@@ -1,0 +1,5 @@
+name: 'Bits Database'
+type: module
+description: 'BD creación de tablas'
+core: 8.x
+package: 'Bits'

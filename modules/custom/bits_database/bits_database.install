@@ -1,0 +1,61 @@
+<?php
+  function bits_database_install(){
+    $schema['bits_forms_simple'] = array(
+      'fields'=>array(
+        'id'=>array(
+          'type'=>'serial',
+          'not null'=> true,
+        ),
+        'uid'=>array(
+          'type'=> 'int',
+          'not null'=> TRUE,
+        ),
+        'status'=> array(
+          'type'=> 'small int',
+          'not null'=>true,
+          'default'=> 0
+        ),
+        'title'=>array(
+          'type'=> 'varchar',
+          'lenght'=>255,
+          'not null'=>true
+        ),
+        'type'=>array(
+          'type'=> 'varchar',
+          'lenght'=>64,
+          'not null'=>true,
+        ),
+      ),
+      'primary key' => array('id'),
+    );
+    $schema['bits_database_counter'] = array(
+      'fields'=>array(
+        'id'=>array(
+          'type'=>'serial',
+          'not null'=> true,
+        ),
+        'route'=>array(
+          'type'=> 'varchar',
+          'lenght'=>150,
+          'not null'=> TRUE,
+        ),
+        'uid'=> array(
+          'type'=> 'int',
+          'not null'=>true,
+          'default'=> 0
+        ),
+        'user_count'=>array(
+          'type'=> 'int',
+          'not null'=>true,
+          'default'=>0
+        ),
+        'lastcount'=>array(
+          'type'=> 'int',
+          'lenght'=>255,
+          'not null'=>true
+        ),
+      ),
+      'primary key' => array('id', 'route'),
+    );
+    return $schema;
+  }

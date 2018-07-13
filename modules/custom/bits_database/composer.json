@@ -1,0 +1,14 @@
+{
+  "name": "drupal/bits_database",
+  "type": "drupal-module",
+  "description": "BD creación de tablas",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/bits_database",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/bits_database",
+    "source": "http://cgit.drupalcode.org/bits_database"
+  },
+  "require": { }
+}

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains bits_database.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function bits_database_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the bits_database module.
+    case 'help.page.bits_database':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('BD creación de tablas') . '</p>';
+      return $output;
+
+    default:
+  }
+}

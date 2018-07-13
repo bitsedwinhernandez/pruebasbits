@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Contains training_drupal_8.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\taxonomy\Entity\Term;
+/**
+ * Implements hook_help().
+ */
+function training_drupal_8_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the training_drupal_8 module.
+    case 'help.page.training_drupal_8':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Modulo de pruebas bits') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_install()
+ */
+function training_drupal_8_install(){
+  \Drupal::state()->set('training.state','pruebabits');
+  $term = Term::create([
+    'name' => 'Prueba bits',
+    'vid' => 'tags',
+  ])->save();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function training_drupal_8_uninstall() {
+  \Drupal::state()->delete('training.state');
+}

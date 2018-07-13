@@ -1,0 +1,8 @@
+access user block:
+  title: 'access user block'
+  description: 'access user block custom wiki bits'
+  restrict access: true
+configure extra user data:
+  title: 'configure extra user data'
+  description: 'configure extra user data custom wiki bits'
+  restrict access: true
