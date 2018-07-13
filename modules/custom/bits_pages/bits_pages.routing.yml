@@ -1,0 +1,24 @@
+
+bits_pages.simple:
+  path: '/bits_pages/simple'
+  defaults:
+    _controller: '\Drupal\bits_pages\Controller\SimpleController::content'
+    _title: 'Página Bits'
+  requirements:
+    _permission: 'access content'
+
+bits_pages.calculator:
+  path: '/bits_pages/calculator/{parameter1}/{parameter2}'
+  defaults:
+    _controller: '\Drupal\bits_pages\Controller\CalculatorController::calculator'
+    _title: 'Calculator'
+  requirements:
+    _permission: 'access calculator'
+
+bits_pages.links_controller_content:
+  path: '/bits_pages/links'
+  defaults:
+    _controller: '\Drupal\bits_pages\Controller\LinksController::content'
+    _title: 'content'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,5 @@
+name: 'Bits Users'
+type: module
+description: 'Usuarios Bits'
+core: 8.x
+package: 'Bits'

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/bits_pages",
+  "type": "drupal-module",
+  "description": "Modulo de paginas bits",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/bits_pages",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/bits_pages",
+    "source": "http://cgit.drupalcode.org/bits_pages"
+  },
+  "require": { }
+}

@@ -1,0 +1,6 @@
+training_drupal_8.hello:
+   title: 'Hello'
+   description: 'Hello page'
+   parent: main
+   menu_name: main
+   route_name: training_drupal_8.hello_controller_hello

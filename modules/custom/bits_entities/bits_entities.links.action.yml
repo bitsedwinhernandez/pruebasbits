@@ -1,0 +1,11 @@
+entity.bits_entities_message.add_form:
+  route_name: entity.bits_entities_message.add_page
+  title: 'Add Message entity'
+  appears_on:
+    - entity.bits_entities_message.collection
+entity.bits_entities_message_type.add_form:
+  route_name: entity.bits_entities_message_type.add_form
+  title: 'Add Message entity type'
+  appears_on:
+    - entity.bits_entities_message_type.collection
+

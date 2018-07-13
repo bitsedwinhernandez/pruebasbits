@@ -1,0 +1,14 @@
+{
+  "name": "drupal/bits_entities",
+  "type": "drupal-module",
+  "description": "Entidades de configuración",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/bits_entities",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/bits_entities",
+    "source": "http://cgit.drupalcode.org/bits_entities"
+  },
+  "require": { }
+}

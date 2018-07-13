@@ -1,0 +1,18 @@
+
+# Message entity menu items definition
+entity.bits_entities_message.collection:
+  title: 'Message entity list'
+  route_name: entity.bits_entities_message.collection
+  description: 'List Message entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Message entity type menu items definition
+entity.bits_entities_message_type.collection:
+  title: 'Message entity type'
+  route_name: entity.bits_entities_message_type.collection
+  description: 'List Message entity type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

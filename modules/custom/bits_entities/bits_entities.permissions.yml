@@ -1,0 +1,30 @@
+add message entity entities:
+  title: 'Create new Message entity entities'
+
+administer message entity entities:
+  title: 'Administer Message entity entities'
+  description: 'Allow to access the administration form to configure Message entity entities.'
+  restrict access: true
+
+delete message entity entities:
+  title: 'Delete Message entity entities'
+
+edit message entity entities:
+  title: 'Edit Message entity entities'
+
+view published message entity entities:
+  title: 'View published Message entity entities'
+
+view unpublished message entity entities:
+  title: 'View unpublished Message entity entities'
+
+view all message entity revisions:
+  title: 'View all Message entity revisions'
+
+revert all message entity revisions:
+  title: 'Revert all Message entity revisions'
+  description: 'Role requires permission <em>view Message entity revisions</em> and <em>edit rights</em> for message entity entities in question or <em>administer message entity entities</em>.'
+
+delete all message entity revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Message entity revisions</em> and <em>delete rights</em> for message entity entities in question or <em>administer message entity entities</em>.'
